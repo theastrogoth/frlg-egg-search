@@ -60,7 +60,7 @@ function generatePID(state1: bigint, state2: bigint): bigint {
 }
 
 function genderFromPID(pid: bigint): number {
-    return Number(pid && 0xffn);
+    return Number(pid % 0xffn);
 }
 
 export function natureFromPID(pid: bigint): Nature {
